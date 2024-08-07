@@ -1,6 +1,6 @@
 {
   "name": "@extension/content-script",
-  "version": "0.2.2",
+  "version": "0.0.0",
   "description": "chrome extension content script",
   "private": true,
   "sideEffects": true,
@@ -9,21 +9,21 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "pnpm run clean&& pnpm type-check && vite build",
+    "build": "npm run clean&& npm run type-check && vite build",
     "build:watch": "cross-env __DEV__=true vite build --mode development",
-    "dev": "pnpm build:watch",
+    "dev": "npm run build:watch",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "npm run lint --fix",
     "prettier": "prettier . --write --ignore-path ../../.prettierignore",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@extension/shared": "workspace:*",
-    "@extension/storage": "workspace:*"
+    "@extension/shared": "0.0.0",
+    "@extension/storage": "0.0.0"
   },
   "devDependencies": {
-    "@extension/hmr": "workspace:*",
-    "@extension/tsconfig": "workspace:*",
-    "@extension/vite-config": "workspace:*"
+    "@extension/hmr": "0.0.0",
+    "@extension/tsconfig": "0.0.0",
+    "@extension/vite-config": "0.0.0"
   }
 }
