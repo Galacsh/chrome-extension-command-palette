@@ -72,5 +72,6 @@
     "chrome-extension",
     "pages/*",
     "packages/*"
-  ]
+  ],
+  "packageManager": "npm@10.5.2"
 }
