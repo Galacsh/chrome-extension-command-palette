@@ -15,15 +15,15 @@ Add the following to the dependencies in `package.json`.
 ```json
 {
   "dependencies": {
-    "@extension/ui": "workspace:*"
+    "@extension/ui": "0.0.0"
   }
 }
 ```
 
-Then, run `pnpm install`.
+Then, run `npm run install`.
 
 ```shell
-pnpm install
+npm run install
 ```
 
 Add the following to the `tailwind.config.js` file.
