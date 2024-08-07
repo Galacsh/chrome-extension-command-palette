@@ -1,6 +1,6 @@
 {
   "name": "@extension/dev-utils",
-  "version": "0.2.2",
+  "version": "0.0.0",
   "description": "chrome extension dev utils",
   "private": true,
   "sideEffects": false,
@@ -14,12 +14,12 @@
     "clean": "rimraf ./dist && rimraf ./build",
     "ready": "tsc",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "npm run lint --fix",
     "prettier": "prettier . --write --ignore-path ../../.prettierignore",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {},
   "devDependencies": {
-    "@extension/tsconfig": "workspace:*"
+    "@extension/tsconfig": "0.0.0"
   }
 }

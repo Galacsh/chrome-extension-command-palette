@@ -1,6 +1,6 @@
 {
   "name": "@extension/shared",
-  "version": "0.2.2",
+  "version": "0.0.0",
   "description": "chrome extension shared code",
   "private": true,
   "sideEffects": false,
@@ -13,13 +13,13 @@
     "clean": "rimraf ./dist",
     "ready": "node build.mjs",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "npm run lint --fix",
     "prettier": "prettier . --write --ignore-path ../../.prettierignore",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {},
   "devDependencies": {
-    "@extension/storage": "workspace:*",
-    "@extension/tsconfig": "workspace:*"
+    "@extension/storage": "0.0.0",
+    "@extension/tsconfig": "0.0.0"
   }
 }
