@@ -1,13 +1,13 @@
 {
   "name": "@extension/vite-config",
-  "version": "0.2.2",
+  "version": "0.0.0",
   "description": "Vite base configuration",
   "main": "index.mjs",
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@extension/hmr": "workspace:*",
-    "@extension/tsconfig": "workspace:*",
+    "@extension/hmr": "0.0.0",
+    "@extension/tsconfig": "0.0.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "deepmerge": "^4.3.1"
   }

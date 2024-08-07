@@ -1,6 +1,6 @@
 {
   "name": "@extension/content-ui",
-  "version": "0.2.2",
+  "version": "0.0.0",
   "description": "chrome extension content ui",
   "type": "module",
   "private": true,
@@ -11,22 +11,22 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build:tailwindcss": "tailwindcss -i src/tailwind-input.css -o src/tailwind-output.css",
-    "build": "pnpm run clean && pnpm type-check && pnpm build:tailwindcss && vite build",
-    "build:watch": "cross-env __DEV__=true vite build --mode development & pnpm build:tailwindcss -- --watch",
-    "dev": "pnpm build:watch",
+    "build": "npm run clean && npm run type-check && npm run build:tailwindcss && vite build",
+    "build:watch": "cross-env __DEV__=true vite build --mode development & npm run build:tailwindcss -- --watch",
+    "dev": "npm run build:watch",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "npm run lint --fix",
     "prettier": "prettier . --write --ignore-path ../../.prettierignore",
     "type-check": "tsc --noEmit",
-    "postinstall": "pnpm run build:tailwindcss"
+    "postinstall": "npm run build:tailwindcss"
   },
   "dependencies": {
-    "@extension/shared": "workspace:*"
+    "@extension/shared": "0.0.0"
   },
   "devDependencies": {
-    "@extension/tailwindcss-config": "workspace:*",
-    "@extension/tsconfig": "workspace:*",
-    "@extension/hmr": "workspace:*",
-    "@extension/vite-config": "workspace:*"
+    "@extension/tailwindcss-config": "0.0.0",
+    "@extension/tsconfig": "0.0.0",
+    "@extension/hmr": "0.0.0",
+    "@extension/vite-config": "0.0.0"
   }
 }

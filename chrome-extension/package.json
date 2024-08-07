@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension",
-  "version": "0.2.2",
+  "version": "0.0.0",
   "description": "chrome extension",
   "scripts": {
     "clean": "rimraf ../../dist",
@@ -8,25 +8,25 @@
     "build:firefox": "tsc --noEmit && cross-env __FIREFOX__=true vite build",
     "build:watch": "cross-env __DEV__=true vite build --mode development",
     "build:firefox:watch": "cross-env __DEV__=true __FIREFOX__=true vite build --mode development",
-    "dev": "pnpm build:watch",
-    "dev:firefox": "pnpm build:firefox:watch",
+    "dev": "npm run build:watch",
+    "dev:firefox": "npm run build:firefox:watch",
     "test": "vitest run",
     "lint": "eslint ./ --ext .ts,.js,.tsx,.jsx",
-    "lint:fix": "pnpm lint --fix",
+    "lint:fix": "npm run lint --fix",
     "prettier": "prettier . --write --ignore-path ../.prettierignore",
     "type-check": "tsc --noEmit"
   },
   "type": "module",
   "dependencies": {
     "webextension-polyfill": "^0.12.0",
-    "@extension/shared": "workspace:*",
-    "@extension/storage": "workspace:*"
+    "@extension/shared": "0.0.0",
+    "@extension/storage": "0.0.0"
   },
   "devDependencies": {
-    "@extension/dev-utils": "workspace:*",
-    "@extension/hmr": "workspace:*",
-    "@extension/tsconfig": "workspace:*",
-    "@extension/vite-config": "workspace:*",
+    "@extension/dev-utils": "0.0.0",
+    "@extension/hmr": "0.0.0",
+    "@extension/tsconfig": "0.0.0",
+    "@extension/vite-config": "0.0.0",
     "@laynezh/vite-plugin-lib-assets": "^0.5.23",
     "@types/ws": "^8.5.11",
     "magic-string": "^0.30.10",

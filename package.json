@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension-boilerplate-react-vite",
-  "version": "0.2.2",
+  "version": "0.0.0",
   "description": "chrome extension boilerplate",
   "license": "MIT",
   "repository": {
@@ -12,7 +12,7 @@
     "build": "turbo build",
     "build:firefox": "cross-env __FIREFOX__=true turbo build",
     "zip": "turbo zip",
-    "dev-server": "pnpm -F hmr ready && pnpm -F hmr dev",
+    "dev-server": "npm run ready --workspace packages/hmr && npm run dev --workspace packages/hmr",
     "dev": "turbo ready && turbo watch dev --concurrency 20",
     "dev:firefox": "turbo ready && cross-env __FIREFOX__=true turbo watch dev --concurrency 20",
     "test": "turbo test",
@@ -31,7 +31,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.268",
+    "@types/chrome": "^0.0.269",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -65,8 +65,13 @@
       "prettier --write"
     ]
   },
-  "packageManager": "pnpm@9.5.0",
   "engines": {
     "node": ">=18.12.0"
-  }
+  },
+  "workspaces": [
+    "chrome-extension",
+    "pages/*",
+    "packages/*"
+  ],
+  "packageManager": "npm@10.5.2"
 }
